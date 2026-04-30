@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Bentre Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><h1><i class="fas fa-bolt"></i> BENTRE HUB</h1></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <div class="nav-icons"><i class="fas fa-shopping-cart" id="cartIcon"><span id="cartCount">0</span></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="productDetailContainer">
+        <div class="product-detail-container">
+            <div class="detail-img">
+                <img id="productImage" src="" alt="Product">
+            </div>
+            <div class="detail-info">
+                <h1 id="productName"></h1>
+                <div class="rating" id="productRating"><i class="fas fa-star"></i> <span></span></div>
+                <div class="price-box">
+                    <span class="price" id="productPrice"></span>
+                    <span class="old-price" id="productOldPrice"></span>
+                </div>
+                <div class="stock-info" id="productStock"></div>
+                <p id="productDescription"></p>
+                <div class="quantity-selector">
+                    <label>Quantity:</label>
+                    <button id="qtyMinus">-</button>
+                    <span id="qtyValue">1</span>
+                    <button id="qtyPlus">+</button>
+                </div>
+                <button class="btn-gold" id="productAddToCart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                <button class="btn-buy-now" id="buyNowBtn">Buy Now <i class="fas fa-bolt"></i></button>
+                <div class="delivery-note">
+                    <i class="fas fa-truck"></i> Free delivery in Nairobi for orders over Ksh 2,000
+                </div>
+            </div>
+        </div>
+        <div class="product-tabs">
+            <div class="tab active" data-tab="specs">Specifications</div>
+            <div class="tab" data-tab="reviews">Reviews (23)</div>
+            <div class="tab" data-tab="delivery">Delivery & Returns</div>
+        </div>
+        <div class="tab-content active" id="specsContent">
+            <p><strong>Model:</strong> Latest edition<br><strong>Warranty:</strong> 12 months<br><strong>In the box:</strong> Device, charger, manual</p>
+        </div>
+        <div class="tab-content" id="reviewsContent">
+            <div class="review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> "Great value for money!" - James, Nairobi</div>
+            <div class="review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> "Fast delivery, works perfectly" - Aisha, Mombasa</div>
+        </div>
+        <div class="tab-content" id="deliveryContent">
+            <p>🚚 Delivery within Nairobi: 24 hours<br>📍 Countrywide: 2-4 business days<br>🔄 7-day return policy for defective items</p>
+        </div>
+    </div>
+
+    <footer style="margin-top: 3rem;"><div class="container">© 2025 Bentre Hub — Quality electronics, fair prices</div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Bentre Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><h1><i class="fas fa-bolt"></i> BENTRE HUB</h1></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="account.html" class="active">Account</a></li>
+                </ul>
+                <div class="nav-icons"><i class="fas fa-shopping-cart" id="cartIcon"><span id="cartCount">0</span></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container account-container">
+        <div class="account-sidebar">
+            <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="user-info" id="userDisplay">
+                <h4>Welcome, Guest</h4>
+                <p><a href="#" id="loginBtn">Login</a> or <a href="#" id="signupBtn">Sign Up</a></p>
+            </div>
+            <ul class="account-menu">
+                <li class="active" data-tab="orders"><i class="fas fa-box"></i> My Orders</li>
+                <li data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Saved Addresses</li>
+                <li data-tab="settings"><i class="fas fa-user-cog"></i> Account Settings</li>
+                <li data-tab="wishlist"><i class="fas fa-heart"></i> Wishlist</li>
+            </ul>
+        </div>
+        <div class="account-content">
+            <div id="ordersTab" class="tab-pane active">
+                <h3>Order History</h3>
+                <div id="orderHistory" class="order-list">
+                    <div class="order-card">
+                        <div class="order-header"><span>Order #BENTRE-001</span><span class="status delivered">Delivered</span></div>
+                        <div class="order-details">Tecno Spark 10C x1 • Ksh 12,999</div>
+                        <div class="order-date">March 15, 2025</div>
+                        <button class="btn-track">Track Order</button>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-header"><span>Order #BENTRE-002</span><span class="status processing">Processing</span></div>
+                        <div class="order-details">Oraimo FreePods x2 • Ksh 4,998</div>
+                        <div class="order-date">March 28, 2025</div>
+                        <button class="btn-track">Track Order</button>
+                    </div>
+                </div>
+            </div>
+            <div id="addressesTab" class="tab-pane">
+                <h3>Saved Addresses</h3>
+                <div class="saved-address">
+                    <p><i class="fas fa-home"></i> <strong>Home</strong><br>Westlands, Nairobi, Waiyaki Way, Apollo Center</p>
+                    <button class="btn-edit">Edit</button>
+                </div>
+                <button class="btn-add-address">+ Add New Address</button>
+            </div>
+            <div id="settingsTab" class="tab-pane">
+                <h3>Account Settings</h3>
+                <div class="form-group"><label>Name</label><input type="text" placeholder="Your Name"></div>
+                <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+                <div class="form-group"><label>Phone</label><input type="tel" placeholder="0712345678"></div>
+                <button class="btn-gold">Save Changes</button>
+            </div>
+            <div id="wishlistTab" class="tab-pane">
+                <h3>Your Wishlist</h3>
+                <div class="product-grid mini-grid" id="wishlistGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

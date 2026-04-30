@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Bentre Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><h1><i class="fas fa-bolt"></i> BENTRE HUB</h1></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container checkout-container">
+        <h2><i class="fas fa-lock"></i> Secure Checkout</h2>
+        <div class="checkout-grid">
+            <div class="checkout-form">
+                <h3>Delivery Information</h3>
+                <form id="checkoutForm">
+                    <div class="form-row">
+                        <div class="form-group"><label>Full Name</label><input type="text" id="fullName" required></div>
+                        <div class="form-group"><label>Phone Number (M-Pesa)</label><input type="tel" id="phone" placeholder="0712345678" required></div>
+                    </div>
+                    <div class="form-group"><label>Email (optional)</label><input type="email" id="email"></div>
+                    <div class="form-group"><label>Delivery Address</label><textarea id="address" rows="2" placeholder="Building, Street, Estate, Nairobi" required></textarea></div>
+                    <div class="form-group"><label>Delivery Area</label>
+                        <select id="area">
+                            <option value="nairobi">Nairobi (24h delivery - Ksh 150)</option>
+                            <option value="countrywide">Countrywide (2-4 days - Ksh 350)</option>
+                        </select>
+                    </div>
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="payment-option"><input type="radio" name="payment" value="mpesa" checked> <i class="fas fa-mobile-alt"></i> M-Pesa Express</label>
+                        <label class="payment-option"><input type="radio" name="payment" value="card"> <i class="fas fa-credit-card"></i> Visa / Mastercard</label>
+                        <label class="payment-option"><input type="radio" name="payment" value="cod"> <i class="fas fa-money-bill"></i> Cash on Delivery</label>
+                    </div>
+                    <button type="submit" class="btn-gold btn-place-order">Place Order</button>
+                </form>
+            </div>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="checkoutItems"></div>
+                <div class="summary-line"><span>Subtotal:</span><span id="checkoutSubtotal">Ksh 0</span></div>
+                <div class="summary-line"><span>Delivery:</span><span id="checkoutDelivery">Ksh 0</span></div>
+                <div class="summary-line total"><span>Total:</span><span id="checkoutTotal">Ksh 0</span></div>
+                <div class="trust-badge"><i class="fas fa-shield-alt"></i> Your payment is secure</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
